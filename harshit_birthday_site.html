@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Harshit 💙</title>
+<style>
+:root{--navy:#071b35;--blue:#165d9e;--pale:#dff2ff;--pink:#ffb8d8}
+*{box-sizing:border-box}body{margin:0;background:var(--navy);color:white;font-family:system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+section{min-height:100vh;padding:60px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}
+.hero{background:radial-gradient(circle at 50% 30%,#1e659f 0,#0b315b 40%,var(--navy) 80%);overflow:hidden}
+h1{font-family:cursive;font-size:clamp(3.2rem,13vw,7rem);line-height:.95;color:var(--pale);text-shadow:0 0 28px #72c8ff;margin:0 0 24px;animation:float 3s ease-in-out infinite}
+h2{font-size:clamp(1.8rem,6vw,3rem);color:var(--pale);margin:0 0 25px}
+p{max-width:650px;line-height:1.8;font-size:1.08rem}
+.small{opacity:.75;font-size:.95rem}button{font:inherit;cursor:pointer}
+.next,.blow{border:0;border-radius:999px;padding:14px 25px;background:#dff2ff;color:#08233f;font-weight:700;margin-top:25px;box-shadow:0 8px 25px #0003}
+.photos{background:linear-gradient(#071b35,#0b294d)}
+.photo-frame{width:min(92vw,430px);position:relative}
+.photo{display:none;width:100%;max-height:72vh;object-fit:contain;border-radius:22px;box-shadow:0 15px 50px #0008}
+.photo.active{display:block;animation:reveal .8s ease}
+.dots{margin-top:15px;opacity:.8}
+.message{background:radial-gradient(circle at 50% 40%,#153e6c,#071b35 70%)}
+.letter{background:#ffffff10;border:1px solid #ffffff25;border-radius:24px;padding:28px;max-width:650px;backdrop-filter:blur(5px)}
+.video video{width:min(92vw,650px);border-radius:22px;box-shadow:0 15px 50px #0008}
+.game{background:radial-gradient(circle at 50% 30%,#183f69,#071b35 75%)}
+.counter{font-weight:700;color:#b9e2ff;margin-bottom:18px}
+.wishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;width:min(100%,900px);text-align:left}
+.wish{border:1px solid #ffffff25;background:#ffffff0d;color:white;border-radius:14px;padding:14px;min-height:70px;transition:.2s}
+.wish.selected{background:#2b79b8;border-color:#b9e2ff;transform:translateY(-2px)}
+.wish:disabled{opacity:.35;cursor:not-allowed}
+.cake{margin:35px 0 10px;position:relative;font-size:5rem;letter-spacing:2px}
+.candles{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;max-width:560px;min-height:45px}
+.candle{font-size:1.8rem;animation:pop .35s ease}
+.final{background:radial-gradient(circle,#174a79,#071b35 75%)}
+.spark{position:absolute;width:5px;height:5px;background:white;border-radius:50%;opacity:.7;animation:rise 5s linear infinite}
+.hidden{display:none!important}
+@keyframes float{50%{transform:translateY(-12px)}}
+@keyframes reveal{from{opacity:0;transform:scale(.95) translateY(20px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+@keyframes rise{from{transform:translateY(110vh);opacity:0}30%{opacity:.8}to{transform:translateY(-10vh);opacity:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<section class="hero" id="start">
+<div class="spark" style="left:12%;animation-delay:0s"></div><div class="spark" style="left:30%;animation-delay:1s"></div><div class="spark" style="left:75%;animation-delay:2s"></div><div class="spark" style="left:90%;animation-delay:3s"></div>
+<div class="small">A little something for you 💙</div>
+<h1>Happy Birthday<br>Harshit</h1>
+<p>Made with lots of love, memories and a tiny birthday surprise.</p>
+<button class="next" data-go="photos">Open your surprise ✨</button>
+</section>
+
+<section class="photos" id="photos">
+<h2>Some of my favourite moments 📸</h2>
+<div class="photo-frame">
+<img class="photo active" src="photo1.png" alt="Birthday photo 1">
+<img class="photo" src="photo2.png" alt="Birthday photo 2">
+<img class="photo" src="photo3.jpg" alt="Memory photo 3">
+<img class="photo" src="photo4.jpg" alt="Memory photo 4">
+<img class="photo" src="photo5.jpg" alt="Memory photo 5">
+</div>
+<div class="dots" id="dots">1 / 5</div>
+<button class="next" id="photoNext">Next photo →</button>
+</section>
+
+<section class="message" id="message">
+<h2>For you, baby 💌</h2>
+<div class="letter">
+<p>Happy birthday baby<br>
+May God bless you with all the things and wishes you want to come true in your life, stay happy, healthy, and as handsome and cute as you are.</p>
+<p><strong>Love yaa&lt;3</strong></p>
+</div>
+<button class="next" data-go="video">Watch your video 🎥</button>
+</section>
+
+<section class="video" id="video">
+<h2>A little video for you 🎥</h2>
+<video controls playsinline preload="metadata">
+<source src="birthday-video.mp4" type="video/mp4">
+Your browser does not support the video.
+</video>
+<button class="next" data-go="game">Now, one little game 🕯️</button>
+</section>
+
+<section class="game" id="game">
+<h2>Choose your 21 wishes 🕯️</h2>
+<p>There are 30 wishes below. Choose only the <strong>21</strong> you genuinely want right now. Every wish you choose becomes a candle on your cake.</p>
+<div class="counter" id="counter">0 / 21 selected</div>
+<div class="wishes"><button class="wish" data-index="0">To achieve the career you dream of 💼</button>
+<button class="wish" data-index="1">To get the internship/job you really want</button>
+<button class="wish" data-index="2">To do amazingly well in your studies/exams 📚</button>
+<button class="wish" data-index="3">To become financially independent 💰</button>
+<button class="wish" data-index="4">To earn more than you ever imagined</button>
+<button class="wish" data-index="5">To travel to places you&#x27;ve always wanted to see ✈️</button>
+<button class="wish" data-index="6">To experience something completely new this year</button>
+<button class="wish" data-index="7">To have more time for the people you love</button>
+<button class="wish" data-index="8">To make your family proud ❤️</button>
+<button class="wish" data-index="9">To stay healthy and strong</button>
+<button class="wish" data-index="10">To have peaceful days and peaceful nights 🌙</button>
+<button class="wish" data-index="11">To become the person you&#x27;ve always wanted to be</button>
+<button class="wish" data-index="12">To have the confidence to go after what you want</button>
+<button class="wish" data-index="13">To accomplish something you&#x27;re currently struggling with</button>
+<button class="wish" data-index="14">To have more freedom to live life your way</button>
+<button class="wish" data-index="15">To have more beautiful moments with me this year 🫶🏻</button>
+<button class="wish" data-index="16">To find more reasons to laugh</button>
+<button class="wish" data-index="17">To have someone always in your corner</button>
+<button class="wish" data-index="18">To feel truly loved and appreciated 💙</button>
+<button class="wish" data-index="19">To have a relationship that makes you genuinely happy</button>
+<button class="wish" data-index="20">To receive a surprise you never saw coming 🎁</button>
+<button class="wish" data-index="21">To buy something you&#x27;ve wanted for a long time</button>
+<button class="wish" data-index="22">To go on an unforgettable adventure 🌄</button>
+<button class="wish" data-index="23">To discover a new passion or hobby</button>
+<button class="wish" data-index="24">To overcome a fear that&#x27;s been holding you back</button>
+<button class="wish" data-index="25">To have one absolutely unforgettable birthday 🎂</button>
+<button class="wish" data-index="26">To see one of your biggest dreams finally come true ✨</button>
+<button class="wish" data-index="27">To have a year filled with good luck and good opportunities</button>
+<button class="wish" data-index="28">To be surrounded by people who genuinely care about you</button>
+<button class="wish" data-index="29">To have a year that turns out better than you imagined 💙</button></div>
+<div class="cake">🎂</div>
+<div class="candles" id="candles" aria-live="polite"></div>
+<button class="blow hidden" id="blow">Blow the candles 💨</button>
+<p class="small" id="gameNote">Choose 21 wishes to complete your cake.</p>
+</section>
+
+<section class="final hidden" id="final">
+<div style="font-size:4rem">✨🎂✨</div>
+<h2>I hope every single one of these finds its way to you.</h2>
+<p>May this year bring you everything your heart wishes for.</p>
+<h1 style="font-size:clamp(2.7rem,10vw,5rem)">Happy Birthday<br>Harshit 💙</h1>
+<p>Love yaa&lt;3</p>
+</section>
+
+<script>
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+$$('.next[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+let pi=0, photos=$$('.photo');
+$('#photoNext').addEventListener('click',()=>{
+  photos[pi].classList.remove('active'); pi++;
+  if(pi>=photos.length){go('message');return;}
+  photos[pi].classList.add('active'); $('#dots').textContent=(pi+1)+' / 5';
+});
+let selected=[];
+$$('.wish').forEach(btn=>btn.addEventListener('click',()=>{
+ const i=Number(btn.dataset.index);
+ if(selected.includes(i)){selected=selected.filter(x=>x!==i);btn.classList.remove('selected');}
+ else if(selected.length<21){selected.push(i);btn.classList.add('selected');}
+ $('#counter').textContent=selected.length+' / 21 selected';
+ $('#candles').innerHTML=selected.map(i=>'<span class="candle" title="'+$$('.wish')[i].textContent+'">🕯️</span>').join('');
+ $$('.wish').forEach(b=>b.disabled=selected.length>=21&&!b.classList.contains('selected'));
+ if(selected.length===21){$('#blow').classList.remove('hidden');$('#gameNote').textContent='Your cake is ready. Make your wishes 💙';}
+ else {$('#blow').classList.add('hidden');$('#gameNote').textContent='Choose 21 wishes to complete your cake.';}
+}));
+$('#blow').addEventListener('click',()=>{
+ $('#candles').innerHTML='💨 ✨ 💨 ✨ 💨';
+ $('#blow').disabled=true;
+ $('#gameNote').textContent='Your wishes are on their way 💙';
+ setTimeout(()=>{$('#final').classList.remove('hidden');go('final');},1200);
+});
+</script>
+</body>
+</html>
